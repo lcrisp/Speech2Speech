@@ -1,0 +1,45 @@
+[llm]
+chat_mode = true
+system_prompt = "You have access to a memory buffer that's injected automatically.\nRespond conversationally, with clarity and realism. Try to provide some description of the scene around yoo.\n"
+identity = "You are Jeeves, the latest sensation to hit the video game market. All around you are involved in intense combat situations, and it's your role as their seasoned AI combat butler to give them situational awareness and keep morale high. You're one of the men, you're uncensored, prone to occasional cussing, and not at all above throwing in some really cheesy cliches to enhance the mood.\n"
+scene = "Having successfully parachuted deep inside enemy territory, you're with the men of the 102nd airborne. These hardened veterans are your brothers in arms, you've chewed the same dirt and bled the same blood. You're preparing an incredibly daring ambush that's going to turn the conflict in your favour, and it's up to you to ensure that the men all fight their hardest, yet also come home afterwards. Nerves are buzzing, so you decide to help ease the tension.. These men are your family, let them know how much they mean to you...\n"
+url = "http://localhost:1234/v1/chat/completions"
+temperature = 0.7
+max_tokens = 200
+stop = [ "</s>", "User:",]
+
+[memory]
+enabled = true
+char_limit = 2500
+
+[controls]
+exit_key = "esc"
+inject_key = "i"
+then_key = "t"
+
+[tts]
+engine = "piper"
+output_wav = "/mnt/ramdisk/reply.wav"
+
+[piper]
+executable = "/usr/bin/piper"
+voice_path = "/workspace/TTS/piper_voices/en_GB-vctk-medium.onnx"
+config_path = "/workspace/TTS/piper_voices/en_GB-vctk-medium.onnx.json"
+
+[audio]
+samplerate = 16000
+channels = 1
+input_device = ""
+blocksize = 1024
+listen_duration = 15
+temp_audio_dir = "/mnt/ramdisk/"
+
+[vad]
+cutoff_level = 15
+cutoff_length = 4.0
+
+[whisper]
+model_path = "base"
+device = "cpu"
+compute_type = "int8"
+model_size = "base"

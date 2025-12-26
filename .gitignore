@@ -1,0 +1,75 @@
+# =========================
+# Python / Virtual Envs
+# =========================
+.venv/
+.venv*/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# uv / pip / build artifacts
+# =========================
+pip-wheel-metadata/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Runtime logs & traces
+# =========================
+*.log
+*.trace
+*.out
+
+# =========================
+# Audio / temporary output
+# =========================
+*.wav
+*.mp3
+*.flac
+/tmp/
+tmp/
+
+# =========================
+# OS / editor noise
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+
+# =========================
+# Local environment files
+# =========================
+.env
+.env.*
+.envrc
+
+# =========================
+# ML / cache / model cruft
+# (keep ONNX voices OUT of repo)
+# =========================
+TTS/piper_voices/
+models/
+.cache/
+.cache-*
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Safety: never commit secrets
+# =========================
+*.key
+*.pem
+*.crt
